@@ -5,6 +5,7 @@ angular.module('iconSpaceTesterApp')
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
-      'Karma'
+      'Karma',
+      'akoenig.deckgrid'
     ];
   });
