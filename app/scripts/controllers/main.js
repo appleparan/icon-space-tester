@@ -24,6 +24,11 @@ iconServices.factory('timeData', function timeDataFactory() {
   };
 });
 
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
+
 iconControllers.controller('iconTestCtrl',
   ['$scope', '$http', '$routeParams', 'numTestPerSection', 'numTestPerShape', 'numTestPerDistance', 'timeData',
   function iconTestCtrl($scope, $http, $routeParams, numTestPerSection, numTestPerShape, numTestPerDistance, timeData) {
@@ -41,24 +46,38 @@ iconControllers.controller('iconTestCtrl',
 
     // GetIcon
     if ($scope.testIdbyShape === 0) {
-      $scope.testKey = 'C' + $scope.testIdbyDistance;
+      $scope.testKey = 'C';
+      $scope.curTestStr = 'Circle Icon Test';
     }
     else if ($scope.testIdbyShape === 1) {
-      $scope.testKey = 'S' + $scope.testIdbyDistance;
+      $scope.testKey = 'S';
+      $scope.curTestStr = 'Square Icon Test';
     }
     else if ($scope.testIdbyShape === 2) {
-      $scope.testKey = 'F' + $scope.testIdbyDistance;
+      $scope.testKey = 'F';
+      $scope.curTestStr = 'Free Form Icon Test';
+    }
+
+    if ($scope.testIdbyDistance === 0) {
+      $scope.xdim = 3;
+      $scope.ydim = 4;
+    }
+    else if($scope.testIdbyDistance === 1) {
+      $scope.xdim = 4;
+      $scope.ydim = 6;
+    }
+    else if($scope.testIdbyDistance === 2) {
+      $scope.xdim = 7;
+      $scope.ydim = 11;
     }
 
     $scope.iconsRes = {};
     $http.get('resources/icon.json').success(function(response){
       $scope.iconsRes = response;
 
-      $scope.icons = $scope.iconsRes[$scope.testKey].img;
-      $scope.xdim = $scope.iconsRes[$scope.testKey].xdim;
-      $scope.ydim = $scope.iconsRes[$scope.testKey].ydim;
-      $scope.curTestStr = $scope.iconsRes[$scope.testKey].shape + ' Icon Test';
-
+      var orgIcons = $scope.iconsRes[$scope.testKey];
+      $scope.icons = shuffle(orgIcons).slice(0, $scope.xdim * $scope.ydim);
+      // $scope.icons = pickImage(orgIcons, $scope.xdim * $scope.ydim);
       $scope.answer = $scope.icons[Math.floor(Math.random() * $scope.icons.length)];
     });
 
