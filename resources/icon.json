@@ -1,0 +1,69 @@
+{
+  "C0": {
+    "xdim": 3,
+    "ydim": 4,
+    "shape": "Circle",
+    "img": [
+      {"id": "ic01", "src": "images/icon/circle/01.png"},
+      {"id": "ic02", "src": "images/icon/circle/02.png"},
+      {"id": "ic03", "src": "images/icon/circle/03.png"},
+      {"id": "ic04", "src": "images/icon/circle/04.png"},
+      {"id": "ic05", "src": "images/icon/circle/05.png"},
+      {"id": "ic06", "src": "images/icon/circle/06.png"},
+      {"id": "ic07", "src": "images/icon/circle/07.png"},
+      {"id": "ic08", "src": "images/icon/circle/08.png"},
+      {"id": "ic09", "src": "images/icon/circle/09.png"},
+      {"id": "ic10", "src": "images/icon/circle/10.png"},
+      {"id": "ic11", "src": "images/icon/circle/11.png"},
+      {"id": "ic12", "src": "images/icon/circle/12.png"}
+    ]
+  },
+  "C1": {
+    "xdim": 4,
+    "ydim": 6,
+    "shape": "Circle",
+    "img": []
+  },
+  "C2": {
+    "xdim": 7,
+    "ydim": 11,
+    "shape": "Circle",
+    "img": []
+  },
+  "S0": {
+    "xdim": 3,
+    "ydim": 4,
+    "shape": "Square",
+    "img": []
+  },
+  "S1": {
+    "xdim": 4,
+    "ydim": 6,
+    "shape": "Square",
+    "img": []
+  },
+  "S2": {
+    "xdim": 7,
+    "ydim": 11,
+    "shape": "Square",
+    "img": []
+  },
+  "F0": {
+    "xdim": 3,
+    "ydim": 4,
+    "shape": "Freeform",
+    "img": []
+  },
+  "F1": {
+    "xdim": 4,
+    "ydim": 6,
+    "shape": "Freeform",
+    "img": []
+  },
+  "F2": {
+    "xdim": 7,
+    "ydim": 11,
+    "shape": "Freeform",
+    "img": []
+  }
+}
