@@ -376,8 +376,8 @@ module.exports = function (grunt) {
     buildGhPages: {
       ghPages: {
         options: {
-          dist: "dist",
-          build_branch: "gh-pages",
+          dist: 'dist',
+          build_branch: 'gh-pages',
           exclude: ['node_modules', '.tmp', '.sass-cache', 'app/bower_components'],
         },
       },
