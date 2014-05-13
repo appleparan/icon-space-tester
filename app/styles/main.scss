@@ -61,8 +61,8 @@ $primary-font-size: 20px;
   }
 }
 
-$res-x: 1344 * 5 / 6;
-$res-y: 768 * 5 / 6;
+$res-x: 1344;
+$res-y: 768;
 .icon-img-wrapper {
   float: left;
   width: 128px;
@@ -108,8 +108,8 @@ $ydim : 11;
   }
 }
 
-$res-x: 2048 * 5 / 6;
-$res-y: 1536 * 5 / 6;
+$res-x: 2048;
+$res-y: 1536;
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -163,8 +163,8 @@ and (max-device-width : 1024px)
 and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
 
-  $xdim : 3;
-  $ydim : 4;
+  $xdim : 4;
+  $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
       width: ($res-x / $xdim) / $res-x * 100%;
@@ -175,8 +175,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
   }
 
-  $xdim : 4;
-  $ydim : 6;
+  $xdim : 6;
+  $ydim : 4;
   .grid-4-6 {
     .icon-img-wrapper {
       width: ($res-x / $xdim) / $res-x * 100%;
@@ -187,8 +187,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
     }
   }
 
-  $xdim : 7;
-  $ydim : 11;
+  $xdim : 11;
+  $ydim : 7;
   .grid-7-11 {
     .icon-img-wrapper {
       width: ($res-x / $xdim) / $res-x * 100%;
