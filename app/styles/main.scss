@@ -8,7 +8,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 .browsehappy {
     margin: 0.2em 0;
-    background: #ccc;
+    backgcircle: #ccc;
     color: #000;
     padding: 0.2em 0;
 }
@@ -51,45 +51,27 @@ body {
     margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
+$primary-font-size: 20px;
+.info {
+  #cur-test-count {
+    font-size: $primary-font-size;
+  }
+  #cur-test-string {
+    font-size: $primary-font-size;
+  }
 }
 
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+.deckgrid[deckgrid]::before {
+    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
+    content: '4 .column.column-1-4';
+    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
+    visibility: hidden;
 }
 
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
+.deckgrid .column {
+    float: left;
 }
 
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-    .container {
-        max-width: 730px;
-    }
-
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-    }
+.deckgrid .column-1-4 {
+    width: 25%;
 }

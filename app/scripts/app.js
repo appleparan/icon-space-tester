@@ -5,13 +5,25 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'ngTouch',
+    'akoenig.deckgrid',
+    'iconControllers',
+    'iconServices'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        controller: 'iconLoadCtrl'
+      })
+      .when('/test/:testId', {
+        templateUrl: 'views/test.html',
+        controller: 'iconTestCtrl'
+      })
+      .when('/stat', {
+        templateUrl: 'views/stat.html',
+        controller: 'statCtrl'
       })
       .otherwise({
         redirectTo: '/'
