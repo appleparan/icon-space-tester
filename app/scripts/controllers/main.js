@@ -30,6 +30,7 @@ iconControllers.controller('iconTestCtrl',
     $scope.randomSort = function() {
       return Math.random();
     };
+    $scope.started = true;
 
     $scope.curTestStr = 'Test not found';
     $scope.testId = parseInt($routeParams.testId) - 1;
@@ -64,6 +65,7 @@ iconControllers.controller('iconTestCtrl',
     // Get Elapsed Time
     $scope.doStartTime = function() {
       $scope.timeStart = new Date().getTime();
+      $scope.started = true;
     };
 
     $scope.doEndTime = function() {

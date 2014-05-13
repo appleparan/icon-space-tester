@@ -61,17 +61,157 @@ $primary-font-size: 20px;
   }
 }
 
-.deckgrid[deckgrid]::before {
-    /* Specifies that the grid should have a maximum of 4 columns. Each column will have the classes 'column' and 'column-1-4' */
-    content: '4 .column.column-1-4';
-    font-size: 0; /* See https://github.com/akoenig/angular-deckgrid/issues/14#issuecomment-35728861 */
-    visibility: hidden;
+$res-x: 1344 * 5 / 6;
+$res-y: 768 * 5 / 6;
+.icon-img-wrapper {
+  float: left;
+  width: 128px;
+  height: auto;
+  img {
+    width: 100%;
+  }
 }
 
-.deckgrid .column {
-    float: left;
+$xdim : 3;
+$ydim : 4;
+.grid-3-4 {
+  .icon-img-wrapper {
+    width: ($res-x / $xdim) / $res-x * 100%;
+    height: ($res-y / $ydim) / $res-y * 100%;
+    padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+    padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+    padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+  }
 }
 
-.deckgrid .column-1-4 {
-    width: 25%;
+$xdim : 4;
+$ydim : 6;
+.grid-4-6 {
+  .icon-img-wrapper {
+    width: ($res-x / $xdim) / $res-x * 100%;
+    height: ($res-y / $ydim) / $res-y * 100%;
+    padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+    padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+    padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+  }
+}
+
+$xdim : 7;
+$ydim : 11;
+.grid-7-11 {
+  .icon-img-wrapper {
+    width: ($res-x / $xdim) / $res-x * 100%;
+    height: ($res-y / $ydim) / $res-y * 100%;
+    padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+    padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+    padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+  }
+}
+
+$res-x: 2048 * 5 / 6;
+$res-y: 1536 * 5 / 6;
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  $xdim : 3;
+  $ydim : 4;
+  .grid-3-4 {
+    .icon-img-wrapper {
+      width: ($res-x / $xdim) / $res-x * 100%;
+      height: ($res-y / $ydim) / $res-y * 100%;
+      padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+      padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    }
+  }
+
+  $xdim : 4;
+  $ydim : 6;
+  .grid-4-6 {
+    .icon-img-wrapper {
+      width: ($res-x / $xdim) / $res-x * 100%;
+      height: ($res-y / $ydim) / $res-y * 100%;
+      padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+      padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    }
+  }
+
+  $xdim : 7;
+  $ydim : 11;
+  .grid-7-11 {
+    .icon-img-wrapper {
+      width: ($res-x / $xdim) / $res-x * 100%;
+      height: ($res-y / $ydim) / $res-y * 100%;
+      padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+      padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    }
+  }
+
+}
+
+// portrait
+$res-x: 1536;
+$res-y: 2048;
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
+
+  $xdim : 3;
+  $ydim : 4;
+  .grid-3-4 {
+    .icon-img-wrapper {
+      width: ($res-x / $xdim) / $res-x * 100%;
+      height: ($res-y / $ydim) / $res-y * 100%;
+      padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+      padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    }
+  }
+
+  $xdim : 4;
+  $ydim : 6;
+  .grid-4-6 {
+    .icon-img-wrapper {
+      width: ($res-x / $xdim) / $res-x * 100%;
+      height: ($res-y / $ydim) / $res-y * 100%;
+      padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+      padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    }
+  }
+
+  $xdim : 7;
+  $ydim : 11;
+  .grid-7-11 {
+    .icon-img-wrapper {
+      width: ($res-x / $xdim) / $res-x * 100%;
+      height: ($res-y / $ydim) / $res-y * 100%;
+      padding-top: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-right: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+      padding-bottom: ($res-y / $ydim - 125) * 0.5 / $res-y * 100%;
+      padding-left: ($res-x / $xdim - 125) * 0.5 / $res-x * 100%;
+    }
+  }
+}
+
+.answer {
+  width: 100px;
+  .img {
+    width: 100%;
+  }
 }
