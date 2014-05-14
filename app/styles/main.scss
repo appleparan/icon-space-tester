@@ -61,14 +61,23 @@ $primary-font-size: 20px;
   }
 }
 
-$res-x: 1344;
+$res-x: 1366;
 $res-y: 768;
+@mixin icon-mixin() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 128px;
+  height: 128px;
+}
+
 .icon-img-wrapper {
   float: left;
-  width: 128px;
-  height: auto;
-  img {
-    width: 100%;
+  .icon-img-fixer {
+    @include icon-mixin();
+    img {
+      width: 100%;
+    }
   }
 }
 
@@ -76,11 +85,8 @@ $xdim : 3;
 $ydim : 4;
 .grid-3-4 {
   .icon-img-wrapper {
-    width: ($res-x / $xdim) / $res-x * 100%;
-    padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-    padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
-    padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-    padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
+    width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+    height: auto;
   }
 }
 
@@ -88,11 +94,8 @@ $xdim : 4;
 $ydim : 6;
 .grid-4-6 {
   .icon-img-wrapper {
-    width: ($res-x / $xdim) / $res-x * 100%;
-    padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-    padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
-    padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-    padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
+    width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+    height: auto;
   }
 }
 
@@ -100,11 +103,8 @@ $xdim : 7;
 $ydim : 11;
 .grid-7-11 {
   .icon-img-wrapper {
-    width: ($res-x / $xdim) / $res-x * 100%;
-    padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-    padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
-    padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-    padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
+    width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+    height: auto;
   }
 }
 
@@ -116,39 +116,36 @@ and (max-device-width : 1024px)
 and (orientation : landscape)
 and (-webkit-min-device-pixel-ratio: 2) {
 
-  $xdim : 3;
-  $ydim : 4;
+  $xdim : 4;
+  $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
-      width: ($res-x / $xdim) / $res-x * 100%;
+      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+      height: auto;
       padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
       padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
     }
   }
 
-  $xdim : 4;
-  $ydim : 6;
+  $xdim : 6;
+  $ydim : 4;
   .grid-4-6 {
     .icon-img-wrapper {
-      width: ($res-x / $xdim) / $res-x * 100%;
+      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+      height: auto;
       padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
       padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
     }
   }
 
-  $xdim : 7;
-  $ydim : 11;
+  $xdim : 11;
+  $ydim : 7;
   .grid-7-11 {
     .icon-img-wrapper {
-      width: ($res-x / $xdim) / $res-x * 100%;
+      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+      height: auto;
       padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
       padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
     }
   }
 
@@ -163,39 +160,36 @@ and (max-device-width : 1024px)
 and (orientation : portrait)
 and (-webkit-min-device-pixel-ratio: 2) {
 
-  $xdim : 4;
-  $ydim : 3;
+  $xdim : 3;
+  $ydim : 4;
   .grid-3-4 {
     .icon-img-wrapper {
-      width: ($res-x / $xdim) / $res-x * 100%;
+      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+      height: auto;
       padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
       padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
     }
   }
 
-  $xdim : 6;
-  $ydim : 4;
+  $xdim : 4;
+  $ydim : 6;
   .grid-4-6 {
     .icon-img-wrapper {
-      width: ($res-x / $xdim) / $res-x * 100%;
+      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+      height: auto;
       padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
       padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
     }
   }
 
-  $xdim : 11;
-  $ydim : 7;
+  $xdim : 7;
+  $ydim : 11;
   .grid-7-11 {
     .icon-img-wrapper {
-      width: ($res-x / $xdim) / $res-x * 100%;
+      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
+      height: auto;
       padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-right: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
       padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-left: ($res-x / $xdim - 128) * 0.5 / $res-x * 100%;
     }
   }
 }
