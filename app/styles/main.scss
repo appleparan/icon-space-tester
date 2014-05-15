@@ -20,12 +20,17 @@ body {
 }
 
 @mixin icon-mixin() {
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 128px;
-  height: 128px;
+  .icon-img-fixer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 128px;
+    height: 128px;
+    img {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
 }
 
 
@@ -58,9 +63,6 @@ $res-y: 900;
       float: left;
       .answer-img-fixer {
         @include icon-mixin();
-        img {
-          width: 100%;
-        }
       }
     }
   }
@@ -74,9 +76,6 @@ $res-y: 900;
     height: 100%;
     .icon-img-fixer {
       @include icon-mixin();
-      img {
-        width: 100%;
-      }
     }
   }
 
@@ -134,9 +133,6 @@ $res-y: 1536;
       float: left;
       .answer-img-fixer {
         @include icon-mixin();
-        img {
-          width: 100%;
-        }
       }
     }
   }
@@ -158,9 +154,6 @@ $res-y: 1536;
     margin-bottom: auto;
     .icon-img-fixer {
       @include icon-mixin();
-      img {
-        width: 100%;
-      }
     }
   }
 
@@ -213,9 +206,6 @@ $res-y: 2048;
     .answer-img-wrapper {
       .answer-img-fixer {
         @include icon-mixin();
-        img {
-          width: 100%;
-        }
       }
     }
   }
@@ -237,9 +227,6 @@ $res-y: 2048;
     margin-bottom: auto;
     .icon-img-fixer {
       @include icon-mixin();
-      img {
-        width: 100%;
-      }
     }
   }
 
@@ -278,7 +265,7 @@ $res-y: 2048;
 }
 
 @mixin icon-mixin-iphone() {
-  display: inline-block;
+  display: block;
   vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
@@ -306,9 +293,6 @@ $y-dim: 640;
       float: left;
       .answer-img-fixer {
         @include icon-mixin-iphone();
-        img {
-          width: 100%;
-        }
       }
     }
   }
@@ -331,6 +315,7 @@ $y-dim: 640;
     .icon-img-fixer {
       @include icon-mixin-iphone();
       img {
+        vertical-align: middle;
         width: 100%;
       }
     }
@@ -385,9 +370,6 @@ $y-dim: 1136;
     .answer-img-wrapper {
       .answer-img-fixer {
         @include icon-mixin-iphone();
-        img {
-          width: 100%;
-        }
       }
     }
   }
