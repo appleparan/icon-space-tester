@@ -23,8 +23,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     img {
       vertical-align: middle;
       width: 100%;
@@ -39,6 +39,40 @@ body {
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
+    width: 128px;
+    height: 128px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@mixin icon-mixin-ipad() {
+  float: left;
+  padding-top: auto;
+  padding-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  .icon-img-fixer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64px;
+    height: 64px;
+    img {
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
+
+
+@mixin answer-img-mixin-ipad() {
+  .answer-img-fixer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
     width: 64px;
     height: 64px;
     img {
@@ -46,6 +80,7 @@ body {
     }
   }
 }
+
 
 @mixin icon-mixin-iphone() {
   float: left;
@@ -164,7 +199,7 @@ $res-y: 768;
       font-size: 18px;
     }
   }
-  
+
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -179,7 +214,7 @@ $res-y: 768;
     }
     .answer-img-wrapper {
       float: left;
-      @include answer-img-mixin();
+      @include answer-img-mixin-ipad();
     }
   }
 
@@ -200,7 +235,7 @@ $res-y: 768;
       //height: (1 / $ydim) * 100%;
       width: 256px;
       height: 256px;
-      @include icon-mixin();
+      @include icon-mixin-ipad();
     }
   }
 
@@ -212,7 +247,7 @@ $res-y: 768;
       //height: (1 / $ydim) * 100%;
       width: 170px;
       height: 192px;
-      @include icon-mixin();
+      @include icon-mixin-ipad();
     }
   }
 
@@ -224,7 +259,7 @@ $res-y: 768;
       //height: (1 / $ydim) * 100%;
       width: 93px;
       height: 109px;
-      @include icon-mixin();
+      @include icon-mixin-ipad();
     }
   }
 
@@ -250,7 +285,7 @@ $res-y: 1024;
   .answer {
     .answer-img-wrapper {
       .answer-img-fixer {
-        @include answer-img-mixin();
+        @include answer-img-mixin-ipad();
       }
     }
   }
@@ -270,9 +305,9 @@ $res-y: 1024;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      width: 512px;
-      height: 512px;
-      @include icon-mixin();
+      width: 256px;
+      height: 256px;
+      @include icon-mixin-ipad();
     }
   }
 
@@ -282,9 +317,9 @@ $res-y: 1024;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      width: 384px;
-      height: 341px;
-      @include icon-mixin();
+      width: 192px;
+      height: 170px;
+      @include icon-mixin-ipad();
     }
   }
 
@@ -294,9 +329,9 @@ $res-y: 1024;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      width: 219px;
-      height: 186px;
-      @include icon-mixin();
+      width: 109px;
+      height: 93px;
+      @include icon-mixin-ipad();
     }
   }
 }
