@@ -191,9 +191,9 @@ $res-y: 1536;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
-      @include icon-mixin();
       width: 512px;
       height: 512px;
+      @include icon-mixin();
     }
   }
 
@@ -203,9 +203,9 @@ $res-y: 1536;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
-      @include icon-mixin();
       width: 341px;
       height: 384px;
+      @include icon-mixin();
     }
   }
 
@@ -215,9 +215,9 @@ $res-y: 1536;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
-      @include icon-mixin();
       width: 186px;
       height: 219px;
+      @include icon-mixin();
     }
   }
 
@@ -256,9 +256,9 @@ $res-y: 2048;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      @include icon-mixin();
       width: 512px;
       height: 512px;
+      @include icon-mixin();
     }
   }
 
@@ -268,9 +268,9 @@ $res-y: 2048;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      @include icon-mixin();
       width: 384px;
       height: 341px;
+      @include icon-mixin();
     }
   }
 
@@ -280,9 +280,9 @@ $res-y: 2048;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      @include icon-mixin();
       width: 219px;
       height: 186px;
+      @include icon-mixin();
     }
   }
 }
@@ -324,9 +324,9 @@ $y-dim: 640;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
-      @include icon-mixin-iphone();
       width: 284px;
       height: 213px;
+      @include icon-mixin-iphone();
     }
   }
 
@@ -336,9 +336,9 @@ $y-dim: 640;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
-      @include icon-mixin-iphone();
       width: 189px;
       height: 160px;
+      @include icon-mixin-iphone();
     }
   }
 
@@ -348,9 +348,9 @@ $y-dim: 640;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
-      @include icon-mixin-iphone();
       width: 103px;
       height: 91px;
+      @include icon-mixin-iphone();
     }
   }
 
@@ -387,9 +387,9 @@ $y-dim: 1136;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      @include icon-mixin-iphone();
       width: 213px;
       height: 284px;
+      @include icon-mixin-iphone();
     }
   }
 
@@ -399,9 +399,9 @@ $y-dim: 1136;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      @include icon-mixin-iphone();
       width: 160px;
       height: 189px;
+      @include icon-mixin-iphone();
     }
   }
 
@@ -411,9 +411,9 @@ $y-dim: 1136;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
-      @include icon-mixin-iphone();
       width: 91px;
       height: 103px;
+      @include icon-mixin-iphone();
     }
   }
 }
