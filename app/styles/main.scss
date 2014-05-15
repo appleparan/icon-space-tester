@@ -256,6 +256,16 @@ $res-y: 2048;
     }
   }
 
+  .icon-img-wrapper {
+    float: left;
+    .icon-img-fixer {
+      @include icon-mixin();
+      img {
+        width: 100%;
+      }
+    }
+  }
+  
   .icon-list {
     width: 100%;
     height: 100%;
