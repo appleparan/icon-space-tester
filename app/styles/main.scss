@@ -71,6 +71,7 @@ $res-y: 900;
     padding-bottom: auto;
     margin-top: auto;
     margin-bottom: auto;
+    height: 100%;
     .icon-img-fixer {
       @include icon-mixin();
       img {
@@ -82,7 +83,6 @@ $res-y: 900;
   $xdim : 4;
   $ydim : 3;
   .grid-3-4 {
-    height: 100%;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
@@ -94,7 +94,6 @@ $res-y: 900;
   $xdim : 6;
   $ydim : 4;
   .grid-4-6 {
-    height: 100%;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
@@ -106,7 +105,6 @@ $res-y: 900;
   $xdim : 11;
   $ydim : 7;
   .grid-7-11 {
-    height: 100%;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
