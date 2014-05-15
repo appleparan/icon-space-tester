@@ -273,10 +273,6 @@ $res-y: 768;
 $res-x: 768;
 $res-y: 1024;
 @include ipad-retina(portrait) {
-  body {
-    -webkit-text-size-adjust: none;
-  }
-  
   .info {
     float: left;
     #cur-test-info {
@@ -347,6 +343,10 @@ $res-y: 1024;
 $x-dim: 568;
 $y-dim: 320;
 @include iphone5(landscape)  {
+  body {
+    -webkit-text-size-adjust: none;
+  }
+
   .info {
     float: left;
     #cur-test-info {
