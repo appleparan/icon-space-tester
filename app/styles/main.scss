@@ -12,12 +12,6 @@ body {
   height: 100%;
 }
 
-.info {
-  float: left;
-  #cur-test-info {
-    font-size: 20px;
-  }
-}
 
 @mixin icon-mixin() {
   float: left;
@@ -99,6 +93,13 @@ $res-x: 1440;
 $res-y: 900;
 // @media screen and (min-width: 320px) {
 @include min-screen(1440px) {
+  .info {
+    float: left;
+    #cur-test-info {
+      font-size: 20px;
+    }
+  }
+
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -157,6 +158,13 @@ $res-y: 900;
 $res-x: 1024;
 $res-y: 768;
 @include ipad-retina(landscape) {
+  .info {
+    float: left;
+    #cur-test-info {
+      font-size: 18px;
+    }
+  }
+  
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -226,6 +234,13 @@ $res-y: 768;
 $res-x: 768;
 $res-y: 1024;
 @include ipad-retina(portrait) {
+  .info {
+    float: left;
+    #cur-test-info {
+      font-size: 18px;
+    }
+  }
+
   .info-container {
     height: 180px;
     padding-top: 10px;
@@ -289,6 +304,13 @@ $res-y: 1024;
 $x-dim: 518;
 $y-dim: 320;
 @include iphone5(landscape)  {
+  .info {
+    float: left;
+    #cur-test-info {
+      font-size: 14px;
+    }
+  }
+
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -358,6 +380,13 @@ $y-dim: 320;
 $x-dim: 320;
 $y-dim: 518;
 @include iphone5(portrait) {
+  .info {
+    float: left;
+    #cur-test-info {
+      font-size: 14px;
+    }
+  }
+
   .info-container {
     height: 180px;
     padding-top: 10px;
