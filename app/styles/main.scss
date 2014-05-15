@@ -4,8 +4,9 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "../bower_components/sass-mediaqueries/_media-queries.scss";
 // endbower
-//@import "../bower_components/sass-mediaqueries/_media-queries.scss";
+// @import "../bower_components/sass-mediaqueries/_media-queries.scss";
 
 body {
   width: 100%;
@@ -97,8 +98,7 @@ body {
 
 $res-x: 1440;
 $res-y: 900;
-// @include min-screen(1200px) {
-@media screen and (min-width: 320px) {
+// @media screen and (min-width: 320px) {
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -156,13 +156,7 @@ $res-y: 900;
 
 $res-x: 2048;
 $res-y: 1536;
-//@include ipad-retina(landscape)
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 2)  {
-
+@include ipad-retina(landscape)
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -231,12 +225,7 @@ and (-webkit-min-device-pixel-ratio: 2)  {
 // portrait
 $res-x: 1536;
 $res-y: 2048;
-//@include ipad-retina(portrait) {
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
+@include ipad-retina(portrait) {
   .info-container {
     height: 180px;
     padding-top: 10px;
@@ -298,13 +287,8 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 $x-dim: 1136;
-$y-dim: 640;
-//@include iphone5(landscape)  {
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : landscape) {
-
+$y-dim: 568;
+@include iphone5(landscape)  {
   .info-container {
     height: 150px;
     padding-top: 10px;
@@ -371,13 +355,9 @@ and (orientation : landscape) {
 }
 
 // portrait
-$x-dim: 640;
+$x-dim: 568;
 $y-dim: 1136;
-//@include iphone5(portrait) {
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : portrait) {
+@include iphone5(portrait) {
   .info-container {
     height: 180px;
     padding-top: 10px;
