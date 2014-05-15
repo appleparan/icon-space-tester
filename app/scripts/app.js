@@ -7,7 +7,7 @@ angular
     'ngSanitize',
     'ngRoute',
     'ngTouch',
-    'akoenig.deckgrid',
+    'ui.bootstrap',
     'iconControllers',
     'iconServices'
   ])

@@ -28,8 +28,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 128px;
-    height: 128px;
+    width: 96px;
+    height: 96px;
     img {
       vertical-align: middle;
       width: 100%;
@@ -44,8 +44,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     vertical-align: middle;
-    width: 128px;
-    height: 128px;
+    width: 96px;
+    height: 96px;
     img {
       width: 100%;
     }
@@ -143,14 +143,14 @@ $res-y: 900;
   }
 
   .info-container {
-    height: 150px;
+    height: 180px;
     padding-top: 10px;
     padding-bottom: 10px;
   }
 
   .answer {
     float: left;
-    h3 {
+    h4 {
       float: left;
       margin-right: 10%;
     }
@@ -218,7 +218,7 @@ $res-y: 768;
   .answer {
     float: left;
     color: #FFFFFF;
-    h3 {
+    h4 {
       float: left;
       margin-right: 10%;
     }
@@ -358,7 +358,7 @@ $y-dim: 320;
 
   .answer {
     float: left;
-    h3 {
+    h4 {
       float: left;
       margin-right: 20%;
     }

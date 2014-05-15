@@ -39,6 +39,7 @@ iconControllers.controller('iconTestCtrl',
 
     $scope.curTestStr = 'Test not found';
     $scope.testId = parseInt($routeParams.testId) - 1;
+    $scope.testCount = parseInt($routeParams.testId);
     $scope.testIdbySection = Math.floor(parseInt($scope.testId) % numTestPerSection);
     $scope.testCountbySection = $scope.testIdbySection + 1;
     $scope.testIdbyShape = Math.floor(parseInt($scope.testId) / numTestPerSection) % numTestPerDistance;
