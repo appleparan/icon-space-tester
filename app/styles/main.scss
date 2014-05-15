@@ -65,6 +65,10 @@ $res-y: 900;
 
   .icon-img-wrapper {
     float: left;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     .icon-img-fixer {
       @include icon-mixin();
       img {
@@ -82,16 +86,6 @@ $res-y: 900;
       //height: (1 / $ydim) * 100%;
       width: 360px;
       height: 300px;
-      padding-top: auto;
-      padding-bottom: auto;
-      margin-top: auto;
-      margin-bottom: auto;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -104,16 +98,6 @@ $res-y: 900;
       //height: (1 / $ydim) * 100%;
       width: 240px;
       height: 225px;
-      padding-top: auto;
-      padding-bottom: auto;
-      margin-top: auto;
-      margin-bottom: auto;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -126,16 +110,6 @@ $res-y: 900;
       //height: (1 / $ydim) * 100%;
       width: 130px;
       height: 128px;
-      padding-top: auto;
-      padding-bottom: auto;
-      margin-top: auto;
-      margin-bottom: auto;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 }
@@ -176,6 +150,20 @@ $res-y: 1536;
     margin-right: 0px !important;
   }
 
+  .icon-img-wrapper {
+    float: left;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    .icon-img-fixer {
+      @include icon-mixin();
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   $xdim : 4;
   $ydim : 3;
   .grid-3-4 {
@@ -184,15 +172,6 @@ $res-y: 1536;
       //height: (1 / $ydim) * 100%;
       width: 512px;
       height: 512px;
-      padding-top: auto;
-      padding-bottom: auto;
-      float: left;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -204,15 +183,6 @@ $res-y: 1536;
       //height: (1 / $ydim) * 100%;
       width: 341px;
       height: 384px;
-      padding-top: auto;
-      padding-bottom: auto;
-      float: left;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -224,15 +194,6 @@ $res-y: 1536;
       //height: (1 / $ydim) * 100%;
       width: 186px;
       height: 219px;
-      padding-top: auto;
-      padding-bottom: auto;
-      float: left;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -268,6 +229,20 @@ $res-y: 2048;
     margin-right: 0px !important;
   }
 
+  .icon-img-wrapper {
+    float: left;
+    padding-top: auto;
+    padding-bottom: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    .icon-img-fixer {
+      @include icon-mixin();
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   $xdim : 3;
   $ydim : 4;
   .grid-3-4 {
@@ -276,15 +251,6 @@ $res-y: 2048;
       //height: ($res-y / $ydim) / $res-y * 100%;
       width: 512px;
       height: 512px;
-      padding-top: auto;
-      padding-bottom: auto;
-      float: left;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -296,15 +262,6 @@ $res-y: 2048;
       //height: ($res-y / $ydim) / $res-y * 100%;
       width: 384px;
       height: 341px;
-      padding-top: auto;
-      padding-bottom: auto;
-      float: left;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 
@@ -316,15 +273,6 @@ $res-y: 2048;
       //height: ($res-y / $ydim) / $res-y * 100%;
       width: 219px;
       height: 186px;
-      padding-top: auto;
-      padding-bottom: auto;
-      float: left;
-      .icon-img-fixer {
-        @include icon-mixin();
-        img {
-          width: 100%;
-        }
-      }
     }
   }
 }
