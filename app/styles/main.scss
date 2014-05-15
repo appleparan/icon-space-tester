@@ -156,7 +156,7 @@ $res-y: 900;
 
 $res-x: 1024;
 $res-y: 768;
-@include ipad-retina(landscape)
+@include ipad-retina(landscape) {
   .info-container {
     height: 150px;
     padding-top: 10px;
