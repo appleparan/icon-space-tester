@@ -4,51 +4,12 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+@import "../bower_components/sass-mediaqueries/_media-queries.scss";
 // endbower
 
-.browsehappy {
-    margin: 0.2em 0;
-    backgcircle: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-/* Space out content a bit */
 body {
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
-}
-
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-    padding-top: 19px;
-    color: #777;
-    border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-    margin: 30px 0;
+  width: 100%;
+  height: 100%;
 }
 
 $primary-font-size: 20px;
@@ -61,69 +22,125 @@ $primary-font-size: 20px;
   }
 }
 
-$res-x: 1366;
-$res-y: 768;
 @mixin icon-mixin() {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 128px;
-  height: 128px;
+  width: 75px;
+  height: 75px;
 }
 
-.icon-img-wrapper {
-  float: left;
-  .icon-img-fixer {
-    @include icon-mixin();
-    img {
-      width: 100%;
+$res-x: 1440;
+$res-y: 900;
+@include min-screen(1200px) {
+  .container {
+    width: 100% !important;
+    height: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .icon-list {
+    width: 100%;
+    height: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .icon-img-wrapper {
+    float: left;
+    .icon-img-fixer {
+      @include icon-mixin();
+      img {
+        width: 100%;
+      }
     }
   }
-}
 
-$xdim : 3;
-$ydim : 4;
-.grid-3-4 {
-  .icon-img-wrapper {
-    width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-    height: auto;
+  $xdim : 4;
+  $ydim : 3;
+  .grid-3-4 {
+    height: 100%;
+    .icon-img-wrapper {
+      //width: (1 / $xdim) * 100%;
+      //height: (1 / $ydim) * 100%;
+      width: 360px;
+      height: 300px;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
-}
 
-$xdim : 4;
-$ydim : 6;
-.grid-4-6 {
-  .icon-img-wrapper {
-    width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-    height: auto;
+  $xdim : 6;
+  $ydim : 4;
+  .grid-4-6 {
+    height: 100%;
+    .icon-img-wrapper {
+      //width: (1 / $xdim) * 100%;
+      //height: (1 / $ydim) * 100%;
+      width: 240px;
+      height: 225px;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
-}
 
-$xdim : 7;
-$ydim : 11;
-.grid-7-11 {
-  .icon-img-wrapper {
-    width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-    height: auto;
+  $xdim : 11;
+  $ydim : 7;
+  .grid-7-11 {
+    height: 100%;
+    .icon-img-wrapper {
+      //width: (1 / $xdim) * 100%;
+      //height: (1 / $ydim) * 100%;
+      width: 130px;
+      height: 128px;
+      padding-top: auto;
+      padding-bottom: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
   }
 }
 
 $res-x: 2048;
 $res-y: 1536;
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : landscape)
-and (-webkit-min-device-pixel-ratio: 2) {
+@include ipad-retina(landscape)  {
+  .container {
+    width: 2048px !important;
+    height: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .icon-list {
+    width: 100%;
+    height: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
 
   $xdim : 4;
   $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
-      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-      height: auto;
-      padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
+      //width: (1 / $xdim) * 100%;
+      //height: (1 / $ydim) * 100%;
+      width: 512px;
+      height: 512px;
+      padding-top: auto;
+      padding-bottom: auto;
     }
   }
 
@@ -131,10 +148,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
   $ydim : 4;
   .grid-4-6 {
     .icon-img-wrapper {
-      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-      height: auto;
-      padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
+      //width: (1 / $xdim) * 100%;
+      //height: (1 / $ydim) * 100%;
+      width: 341px;
+      height: 384px;
+      padding-top: auto;
+      padding-bottom: auto;
     }
   }
 
@@ -142,10 +161,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
   $ydim : 7;
   .grid-7-11 {
     .icon-img-wrapper {
-      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-      height: auto;
-      padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
+      //width: (1 / $xdim) * 100%;
+      //height: (1 / $ydim) * 100%;
+      width: 186px;
+      height: 219px;
+      padding-top: auto;
+      padding-bottom: auto;
     }
   }
 
@@ -154,20 +175,35 @@ and (-webkit-min-device-pixel-ratio: 2) {
 // portrait
 $res-x: 1536;
 $res-y: 2048;
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
-and (orientation : portrait)
-and (-webkit-min-device-pixel-ratio: 2) {
+@include ipad-retina(portrait) {
+  .container {
+    width: 1536px !important;
+    height: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  .icon-list {
+    width: 100%;
+    height: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
 
   $xdim : 3;
   $ydim : 4;
   .grid-3-4 {
     .icon-img-wrapper {
-      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-      height: auto;
-      padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
+      //width: ($res-x / $xdim) / $res-x * 100%;
+      //height: ($res-y / $ydim) / $res-y * 100%;
+      width: 512px;
+      height: 512px;
+      padding-top: auto;
+      padding-bottom: auto;
     }
   }
 
@@ -175,10 +211,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
   $ydim : 6;
   .grid-4-6 {
     .icon-img-wrapper {
-      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-      height: auto;
-      padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
+      //width: ($res-x / $xdim) / $res-x * 100%;
+      //height: ($res-y / $ydim) / $res-y * 100%;
+      width: 384px;
+      height: 341px;
+      padding-top: auto;
+      padding-bottom: auto;
     }
   }
 
@@ -186,10 +224,12 @@ and (-webkit-min-device-pixel-ratio: 2) {
   $ydim : 11;
   .grid-7-11 {
     .icon-img-wrapper {
-      width: (($res-x - ($xdim - 1)) / $xdim) / $res-x * 100%;
-      height: auto;
-      padding-top: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
-      padding-bottom: ($res-y / $ydim - 128) * 0.5 / $res-y * 100%;
+      //width: ($res-x / $xdim) / $res-x * 100%;
+      //height: ($res-y / $ydim) / $res-y * 100%;
+      width: 219px;
+      height: 186px;
+      padding-top: auto;
+      padding-bottom: auto;
     }
   }
 }

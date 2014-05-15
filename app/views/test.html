@@ -1,17 +1,5 @@
-<!-- Icon grid Section -->
-
-<div class="icon-list col-lg-12 col-md-12 col-sm-12 col-xs-12">
-  <div class="grid-{{ xdim }}-{{ ydim }}" ng-if="started" ng-repeat="icon in icons | orderBy:randomSort">
-    <div class="icon-img-wrapper">
-      <div class="icon-img-fixer">
-        <img class="icon-img" ng-src="{{ icon.src }}">
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Information Section -->
-
 <div class="info col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
   <div class="current-info">
@@ -31,6 +19,13 @@
       </div>
     </div>
    </div>
-  <button type="button" class="btn btn-default btn-lg" ng-click="doStartTime"> Start Test </button>
-  <button type="button" class="btn btn-default btn-lg" ng-click="doEndTime"> Next</button>
+</div>
+
+<!-- Icon grid Section -->
+<div ng-if="startTest" class="icon-list grid-{{ xdim }}-{{ ydim }}  col-lg-12 col-md-12 col-sm-12 col-xs-12">
+  <div class="icon-img-wrapper"  ng-repeat="(idx, icon) in icons | orderBy:randomSort">
+    <div class="icon-img-fixer">
+      <img class="icon-img" ng-src="{{ icon.src }}">
+    </div>
+  </div>
 </div>
