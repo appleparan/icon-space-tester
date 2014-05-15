@@ -304,7 +304,7 @@ $y-dim: 640;
     .answer-img-wrapper {
       float: left;
       .answer-img-fixer {
-        @include icon-mixin();
+        @include icon-mixin-iphone();
         img {
           width: 100%;
         }
@@ -383,7 +383,7 @@ $res-y: 2048;
   .answer {
     .answer-img-wrapper {
       .answer-img-fixer {
-        @include icon-mixin();
+        @include icon-mixin-iphone();
         img {
           width: 100%;
         }
