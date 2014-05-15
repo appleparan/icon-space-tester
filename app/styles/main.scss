@@ -11,8 +11,12 @@ body {
   width: 100%;
   height: 100%;
   -webkit-text-size-adjust: none;
+  background-color: #AEC6CF;
 }
 
+@mixin bg-color() {
+  background-color: #AEC6CF !important;
+}
 
 @mixin icon-mixin() {
   float: left;
@@ -119,6 +123,7 @@ body {
 .icon-list {
   width: 100%;
   height: 100%;
+  @include bg-color();
   padding-left: 0px !important;
   padding-right: 0px !important;
   margin-left: 0px !important;
@@ -131,6 +136,7 @@ $res-y: 900;
 @include min-screen(1440px) {
   .info {
     float: left;
+    color: #FFFFFF;
     #cur-test-info {
       font-size: 20px;
     }
@@ -146,7 +152,7 @@ $res-y: 900;
     float: left;
     h3 {
       float: left;
-      margin-right: 20%;
+      margin-right: 10%;
     }
     .answer-img-wrapper {
       float: left;
@@ -196,6 +202,7 @@ $res-y: 768;
 @include ipad-retina(landscape) {
   .info {
     float: left;
+    color: #FFFFFF;
     -webkit-text-size-adjust: none;
     #cur-test-info {
       font-size: 18px;
@@ -210,9 +217,10 @@ $res-y: 768;
 
   .answer {
     float: left;
+    color: #FFFFFF;
     h3 {
       float: left;
-      margin-right: 20%;
+      margin-right: 10%;
     }
     .answer-img-wrapper {
       float: left;
@@ -223,6 +231,7 @@ $res-y: 768;
   .icon-list {
     width: 100%;
     height: 100%;
+    @include bg-color();
     -webkit-text-size-adjust: none;
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -234,8 +243,6 @@ $res-y: 768;
   $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
-      //width: (1 / $xdim) * 100%;
-      //height: (1 / $ydim) * 100%;
       width: 250px;
       height: 256px;
       @include icon-mixin-ipad();
@@ -246,8 +253,6 @@ $res-y: 768;
   $ydim : 4;
   .grid-4-6 {
     .icon-img-wrapper {
-      //width: (1 / $xdim) * 100%;
-      //height: (1 / $ydim) * 100%;
       width: 166px;
       height: 192px;
       @include icon-mixin-ipad();
@@ -258,8 +263,6 @@ $res-y: 768;
   $ydim : 7;
   .grid-7-11 {
     .icon-img-wrapper {
-      //width: (1 / $xdim) * 100%;
-      //height: (1 / $ydim) * 100%;
       width: 90px;
       height: 109px;
       @include icon-mixin-ipad();
@@ -274,6 +277,7 @@ $res-y: 1000;
 @include ipad-retina(portrait) {
   .info {
     float: left;
+    color: #FFFFFF;
     #cur-test-info {
       font-size: 18px;
     }
@@ -296,6 +300,7 @@ $res-y: 1000;
   .icon-list {
     width: 100%;
     height: 100%;
+    @include bg-color();
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin-left: 0px !important;
@@ -306,8 +311,6 @@ $res-y: 1000;
   $ydim : 4;
   .grid-3-4 {
     .icon-img-wrapper {
-      //width: ($res-x / $xdim) / $res-x * 100%;
-      //height: ($res-y / $ydim) / $res-y * 100%;
       width: 256px;
       height: 250px;
       @include icon-mixin-ipad();
@@ -318,8 +321,6 @@ $res-y: 1000;
   $ydim : 6;
   .grid-4-6 {
     .icon-img-wrapper {
-      //width: ($res-x / $xdim) / $res-x * 100%;
-      //height: ($res-y / $ydim) / $res-y * 100%;
       width: 192px;
       height: 166px;
       @include icon-mixin-ipad();
@@ -330,8 +331,6 @@ $res-y: 1000;
   $ydim : 11;
   .grid-7-11 {
     .icon-img-wrapper {
-      //width: ($res-x / $xdim) / $res-x * 100%;
-      //height: ($res-y / $ydim) / $res-y * 100%;
       width: 109px;
       height: 90px;
       @include icon-mixin-ipad();
@@ -344,6 +343,7 @@ $y-dim: 320;
 @include iphone5(landscape)  {
   .info {
     float: left;
+    color: #FFFFFF;
     -webkit-text-size-adjust: none;
     #cur-test-info {
       font-size: 12px;
@@ -371,6 +371,7 @@ $y-dim: 320;
   .icon-list {
     width: 100%;
     height: 100%;
+    @include bg-color();
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin-left: 0px !important;
@@ -382,8 +383,6 @@ $y-dim: 320;
   $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
-      //width: (1 / $xdim) * 100%;
-      //height: (1 / $ydim) * 100%;
       width: 138px;
       height: 106px;
       @include icon-mixin-iphone();
@@ -394,8 +393,6 @@ $y-dim: 320;
   $ydim : 4;
   .grid-4-6 {
     .icon-img-wrapper {
-      //width: (1 / $xdim) * 100%;
-      //height: (1 / $ydim) * 100%;
       width: 92px;
       height: 80px;
       @include icon-mixin-iphone();
@@ -406,8 +403,6 @@ $y-dim: 320;
   $ydim : 7;
   .grid-7-11 {
     .icon-img-wrapper {
-      //width: (1 / $xdim) * 100%;
-      //height: (1 / $ydim) * 100%;
       width: 50px;
       height: 45px;
       @include icon-mixin-iphone();
@@ -421,6 +416,7 @@ $y-dim: 568;
 @include iphone5(portrait) {
   .info {
     float: left;
+    color: #FFFFFF;
     #cur-test-info {
       font-size: 14px;
     }
@@ -441,6 +437,7 @@ $y-dim: 568;
   .icon-list {
     width: 100%;
     height: 100%;
+    @include bg-color();
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin-left: 0px !important;
@@ -451,8 +448,6 @@ $y-dim: 568;
   $ydim : 4;
   .grid-3-4 {
     .icon-img-wrapper {
-      //width: ($res-x / $xdim) / $res-x * 100%;
-      //height: ($res-y / $ydim) / $res-y * 100%;
       width: 106px;
       height: 138px;
       @include icon-mixin-iphone();
@@ -463,8 +458,6 @@ $y-dim: 568;
   $ydim : 6;
   .grid-4-6 {
     .icon-img-wrapper {
-      //width: ($res-x / $xdim) / $res-x * 100%;
-      //height: ($res-y / $ydim) / $res-y * 100%;
       width: 80px;
       height: 92px;
       @include icon-mixin-iphone();
@@ -475,8 +468,6 @@ $y-dim: 568;
   $ydim : 11;
   .grid-7-11 {
     .icon-img-wrapper {
-      //width: ($res-x / $xdim) / $res-x * 100%;
-      //height: ($res-y / $ydim) / $res-y * 100%;
       width: 45px;
       height: 50px;
       @include icon-mixin-iphone();
