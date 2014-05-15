@@ -20,12 +20,17 @@ body {
 }
 
 @mixin icon-mixin() {
+  float: left;
+  padding-top: auto;
+  padding-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   .icon-img-fixer {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 64px;
-    height: 64px;
+    width: 128px;
+    height: 128px;
     img {
       vertical-align: middle;
       width: 100%;
@@ -34,13 +39,51 @@ body {
 }
 
 
+@mixin answer-img-mixin() {
+  .answer-img-fixer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    width: 128px;
+    height: 128px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @mixin icon-mixin-iphone() {
-  display: block;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 38px;
-  height: 38px;
+  float: left;
+  padding-top: auto;
+  padding-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  .icon-img-fixer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    width: 75px;
+    height: 75px;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@mixin answer-img-mixin-iphone() {
+  .answer-img-fixer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    width: 75px;
+    height: 75px;
+    img {
+      width: 100%;
+    }
+  }
 }
 
 .icon-list {
@@ -70,21 +113,7 @@ $res-y: 900;
     }
     .answer-img-wrapper {
       float: left;
-      .answer-img-fixer {
-        @include icon-mixin();
-      }
-    }
-  }
-
-  .icon-img-wrapper {
-    float: left;
-    padding-top: auto;
-    padding-bottom: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    height: 100%;
-    .icon-img-fixer {
-      @include icon-mixin();
+      @include answer-img-mixin();
     }
   }
 
@@ -94,6 +123,7 @@ $res-y: 900;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin();
       width: 360px;
       height: 300px;
     }
@@ -105,6 +135,7 @@ $res-y: 900;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin();
       width: 240px;
       height: 225px;
     }
@@ -116,6 +147,7 @@ $res-y: 900;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin();
       width: 130px;
       height: 128px;
     }
@@ -140,9 +172,7 @@ $res-y: 1536;
     }
     .answer-img-wrapper {
       float: left;
-      .answer-img-fixer {
-        @include icon-mixin();
-      }
+      @include answer-img-mixin();
     }
   }
 
@@ -155,23 +185,13 @@ $res-y: 1536;
     margin-right: 0px !important;
   }
 
-  .icon-img-wrapper {
-    float: left;
-    padding-top: auto;
-    padding-bottom: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    .icon-img-fixer {
-      @include icon-mixin();
-    }
-  }
-
   $xdim : 4;
   $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin();
       width: 512px;
       height: 512px;
     }
@@ -183,6 +203,7 @@ $res-y: 1536;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin();
       width: 341px;
       height: 384px;
     }
@@ -194,6 +215,7 @@ $res-y: 1536;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin();
       width: 186px;
       height: 219px;
     }
@@ -214,7 +236,7 @@ $res-y: 2048;
   .answer {
     .answer-img-wrapper {
       .answer-img-fixer {
-        @include icon-mixin();
+        @include answer-img-mixin();
       }
     }
   }
@@ -228,23 +250,13 @@ $res-y: 2048;
     margin-right: 0px !important;
   }
 
-  .icon-img-wrapper {
-    float: left;
-    padding-top: auto;
-    padding-bottom: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    .icon-img-fixer {
-      @include icon-mixin();
-    }
-  }
-
   $xdim : 3;
   $ydim : 4;
   .grid-3-4 {
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
+      @include icon-mixin();
       width: 512px;
       height: 512px;
     }
@@ -256,6 +268,7 @@ $res-y: 2048;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
+      @include icon-mixin();
       width: 384px;
       height: 341px;
     }
@@ -267,6 +280,7 @@ $res-y: 2048;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
+      @include icon-mixin();
       width: 219px;
       height: 186px;
     }
@@ -291,9 +305,7 @@ $y-dim: 640;
     }
     .answer-img-wrapper {
       float: left;
-      .answer-img-fixer {
-        @include icon-mixin-iphone();
-      }
+      @include answer-img-mixin-iphone();
     }
   }
 
@@ -306,27 +318,13 @@ $y-dim: 640;
     margin-right: 0px !important;
   }
 
-  .icon-img-wrapper {
-    float: left;
-    padding-top: auto;
-    padding-bottom: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    .icon-img-fixer {
-      @include icon-mixin-iphone();
-      img {
-        vertical-align: middle;
-        width: 100%;
-      }
-    }
-  }
-
   $xdim : 4;
   $ydim : 3;
   .grid-3-4 {
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin-iphone();
       width: 284px;
       height: 213px;
     }
@@ -338,6 +336,7 @@ $y-dim: 640;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin-iphone();
       width: 189px;
       height: 160px;
     }
@@ -349,6 +348,7 @@ $y-dim: 640;
     .icon-img-wrapper {
       //width: (1 / $xdim) * 100%;
       //height: (1 / $ydim) * 100%;
+      @include icon-mixin-iphone();
       width: 103px;
       height: 91px;
     }
@@ -368,9 +368,7 @@ $y-dim: 1136;
 
   .answer {
     .answer-img-wrapper {
-      .answer-img-fixer {
-        @include icon-mixin-iphone();
-      }
+      @include answer-img-mixin-iphone();
     }
   }
 
@@ -383,26 +381,13 @@ $y-dim: 1136;
     margin-right: 0px !important;
   }
 
-  .icon-img-wrapper {
-    float: left;
-    padding-top: auto;
-    padding-bottom: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    .icon-img-fixer {
-      @include icon-mixin-iphone();
-      img {
-        width: 100%;
-      }
-    }
-  }
-
   $xdim : 3;
   $ydim : 4;
   .grid-3-4 {
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
+      @include icon-mixin-iphone();
       width: 213px;
       height: 284px;
     }
@@ -414,6 +399,7 @@ $y-dim: 1136;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
+      @include icon-mixin-iphone();
       width: 160px;
       height: 189px;
     }
@@ -425,6 +411,7 @@ $y-dim: 1136;
     .icon-img-wrapper {
       //width: ($res-x / $xdim) / $res-x * 100%;
       //height: ($res-y / $ydim) / $res-y * 100%;
+      @include icon-mixin-iphone();
       width: 91px;
       height: 103px;
     }
