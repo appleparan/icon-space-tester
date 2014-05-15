@@ -20,7 +20,8 @@ body {
 }
 
 @mixin icon-mixin() {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
   width: 128px;
@@ -279,7 +280,8 @@ $res-y: 2048;
 }
 
 @mixin icon-mixin-iphone() {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
   width: 75px;
