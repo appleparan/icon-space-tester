@@ -193,12 +193,9 @@ $res-y: 900;
 $res-x: 1024;
 $res-y: 768;
 @include ipad-retina(landscape) {
-  body {
-    -webkit-text-size-adjust: none;
-  }
-
   .info {
     float: left;
+    -webkit-text-size-adjust: none;
     #cur-test-info {
       font-size: 18px;
     }
@@ -225,6 +222,7 @@ $res-y: 768;
   .icon-list {
     width: 100%;
     height: 100%;
+    -webkit-text-size-adjust: none;
     padding-left: 0px !important;
     padding-right: 0px !important;
     margin-left: 0px !important;
@@ -343,12 +341,9 @@ $res-y: 1000;
 $x-dim: 552;
 $y-dim: 320;
 @include iphone5(landscape)  {
-  body {
-    -webkit-text-size-adjust: none;
-  }
-
   .info {
     float: left;
+    -webkit-text-size-adjust: none;
     #cur-test-info {
       font-size: 12px;
     }
@@ -379,6 +374,7 @@ $y-dim: 320;
     padding-right: 0px !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
+    -webkit-text-size-adjust: none;
   }
 
   $xdim : 4;
@@ -416,7 +412,6 @@ $y-dim: 320;
       @include icon-mixin-iphone();
     }
   }
-
 }
 
 // portrait
