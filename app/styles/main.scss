@@ -97,8 +97,8 @@ body {
 
 $res-x: 1440;
 $res-y: 900;
-@include min-screen(1200px) {
-
+// @include min-screen(1200px) {
+@media screen and (min-width: 320px) {
   .info-container {
     height: 150px;
     padding-top: 10px;
