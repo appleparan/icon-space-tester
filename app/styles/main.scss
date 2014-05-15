@@ -24,8 +24,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 128px;
-    height: 128px;
+    width: 64px;
+    height: 64px;
     img {
       vertical-align: middle;
       width: 100%;
@@ -33,6 +33,15 @@ body {
   }
 }
 
+
+@mixin icon-mixin-iphone() {
+  display: block;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  width: 38px;
+  height: 38px;
+}
 
 .icon-list {
   width: 100%;
@@ -262,15 +271,6 @@ $res-y: 2048;
       height: 186px;
     }
   }
-}
-
-@mixin icon-mixin-iphone() {
-  display: block;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75px;
-  height: 75px;
 }
 
 $x-dim: 1136;
