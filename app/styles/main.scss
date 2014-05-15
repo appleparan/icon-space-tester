@@ -372,8 +372,8 @@ $y-dim: 640;
 }
 
 // portrait
-$res-x: 1536;
-$res-y: 2048;
+$x-dim: 640;
+$y-dim: 1136;
 @include iphone5(portrait) {
   .info-container {
     height: 180px;
