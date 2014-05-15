@@ -27,32 +27,33 @@ body {
   height: 128px;
 }
 
-.info-container {
-  height: 150px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.answer {
-  float: left;
-  h3 {
-    float: left;
-    margin-right: 20%;
-  }
-  .answer-img-wrapper {
-    float: left;
-    .answer-img-fixer {
-      @include icon-mixin();
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-
 $res-x: 1440;
 $res-y: 900;
 @include min-screen(1200px) {
+
+  .info-container {
+    height: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .answer {
+    float: left;
+    h3 {
+      float: left;
+      margin-right: 20%;
+    }
+    .answer-img-wrapper {
+      float: left;
+      .answer-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .icon-list {
     width: 100%;
     height: 100%;
@@ -85,6 +86,12 @@ $res-y: 900;
       padding-bottom: auto;
       margin-top: auto;
       margin-bottom: auto;
+      .icon-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -101,6 +108,12 @@ $res-y: 900;
       padding-bottom: auto;
       margin-top: auto;
       margin-bottom: auto;
+      .icon-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -117,6 +130,12 @@ $res-y: 900;
       padding-bottom: auto;
       margin-top: auto;
       margin-bottom: auto;
+      .icon-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }
@@ -124,6 +143,30 @@ $res-y: 900;
 $res-x: 2048;
 $res-y: 1536;
 @include ipad-retina(landscape)  {
+
+  .info-container {
+    height: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .answer {
+    float: left;
+    h3 {
+      float: left;
+      margin-right: 20%;
+    }
+    .answer-img-wrapper {
+      float: left;
+      .answer-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .icon-list {
     width: 100%;
     height: 100%;
@@ -143,6 +186,12 @@ $res-y: 1536;
       height: 512px;
       padding-top: auto;
       padding-bottom: auto;
+      .icon-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -156,6 +205,12 @@ $res-y: 1536;
       height: 384px;
       padding-top: auto;
       padding-bottom: auto;
+      .icon-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -169,6 +224,12 @@ $res-y: 1536;
       height: 219px;
       padding-top: auto;
       padding-bottom: auto;
+      .icon-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -178,6 +239,23 @@ $res-y: 1536;
 $res-x: 1536;
 $res-y: 2048;
 @include ipad-retina(portrait) {
+  .info-container {
+    height: 180px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .answer {
+    .answer-img-wrapper {
+      .answer-img-fixer {
+        @include icon-mixin();
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .icon-list {
     width: 100%;
     height: 100%;
