@@ -5,7 +5,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 // bower:scss
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
-@import "../bower_components/sass-mediaqueries/_media-queries.scss";
+//@import "../bower_components/sass-mediaqueries/_media-queries.scss";
 
 body {
   width: 100%;
@@ -156,7 +156,12 @@ $res-y: 900;
 
 $res-x: 2048;
 $res-y: 1536;
-@include ipad-retina(landscape)  {
+//@include ipad-retina(landscape)
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2)  {
 
   .info-container {
     height: 150px;
@@ -226,7 +231,12 @@ $res-y: 1536;
 // portrait
 $res-x: 1536;
 $res-y: 2048;
-@include ipad-retina(portrait) {
+//@include ipad-retina(portrait) {
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 2) {
   .info-container {
     height: 180px;
     padding-top: 10px;
@@ -289,7 +299,11 @@ $res-y: 2048;
 
 $x-dim: 1136;
 $y-dim: 640;
-@include iphone5(landscape)  {
+//@include iphone5(landscape)  {
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
 
   .info-container {
     height: 150px;
@@ -359,7 +373,11 @@ $y-dim: 640;
 // portrait
 $x-dim: 640;
 $y-dim: 1136;
-@include iphone5(portrait) {
+//@include iphone5(portrait) {
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
   .info-container {
     height: 180px;
     padding-top: 10px;
