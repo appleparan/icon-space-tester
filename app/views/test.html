@@ -29,7 +29,7 @@
 
 <!-- Icon grid Section -->
 <div ng-if="startTest" class="icon-list grid-{{ xdim }}-{{ ydim }}">
-  <div class="icon-img-wrapper"  ng-repeat="icon in icons | orderBy:randomSort">
+  <div class="icon-img-wrapper"  ng-repeat="icon in icons">
     <div class="icon-img-fixer">
       <img class="icon-img" ng-src="{{ icon.src }}">
     </div>
