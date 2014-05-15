@@ -21,6 +21,9 @@ angular
         templateUrl: 'views/test.html',
         controller: 'iconTestCtrl'
       })
+      .when('/end', {
+        templateUrl: 'views/thanks.html'
+      })
       .when('/stat', {
         templateUrl: 'views/stat.html',
         controller: 'statCtrl'
