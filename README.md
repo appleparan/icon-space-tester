@@ -1,6 +1,6 @@
 icon-space-tester
 ==========
-Made by Jongsu Kim
+Development suspended.
 ---
 
 - AngularJS based icon-space-tester
