@@ -7,9 +7,7 @@ Made by Jongsu Kim
 - Optimized on Portrait mode (iPad retina, iphone5)
 - Use full screen browser (such as mercury)
 
-1. URL
-
-Clicking link may not working, 
+1. URL (link may not working, access page via following link)
     - http://appleparan.github.com/icon-space-tester/#/ : start position, enter some information.
     - http://appleparan.github.com/icon-space-tester/#/@id : @id varies on 1 to 72 (total 72 test). Based on @id, I classified test as several category.
     - http://appleparan.github.com/icon-space-tester/#/stat : showing statiscal value (such as time average) and it should be hidden
